@@ -10,6 +10,13 @@ return {
     ["<C-a>"] = { "^" },
     ["<C-e>"] = { "$" },
 
+    -- split window resize
+    -- Alt key
+    ["∆"] = { ":resize +2<CR>", desc = "Resize split up" },
+    ["˚"] = { ":resize -2<CR>", desc = "Resize split down" },
+    ["¬"] = { ":vertical resize +2<CR>", desc = "Resize split left" },
+    ["˙"] = { ":vertical resize -2<CR>", desc = "Resize split right" },
+
     -- Do not yank with x
     x = { '"_x' },
 
