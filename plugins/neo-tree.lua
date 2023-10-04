@@ -22,6 +22,14 @@ return {
     },
     window = {
       width = 40,
+      mappings = {
+        ["c"] = { -- takes text input for destination, also accepts the optional config.show_path option like "add":
+          "copy",
+          config = {
+            show_path = "relative", -- "none", "relative", "absolute"
+          },
+        },
+      },
     },
   },
 }
