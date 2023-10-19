@@ -3,7 +3,6 @@ return {
     "rebelot/heirline.nvim",
     opts = function(_, opts)
       local status = require "astronvim.utils.status"
-      local conditions = require "heirline.conditions"
       local utils = require "heirline.utils"
 
       local FileNameBlock = {
