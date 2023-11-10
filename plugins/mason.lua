@@ -34,11 +34,11 @@ return {
         "gitlint",
         "shellcheck",
         "jsonlint",
-        "luacheck",
+        -- "luacheck",
         "markdownlint",
         "yamllint",
         "fixjson",
-        "luaformatter",
+        -- "luaformatter",
         "prettier",
         "stylua",
       })

@@ -29,6 +29,12 @@ return {
             show_path = "relative", -- "none", "relative", "absolute"
           },
         },
+        ["m"] = { -- takes text input for destination, also accepts the optional config.show_path option like "add":
+          "move",
+          config = {
+            show_path = "relative", -- "none", "relative", "absolute"
+          },
+        },
       },
     },
   },
