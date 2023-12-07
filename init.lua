@@ -43,6 +43,12 @@ return {
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },
+      filter = function(client)
+        -- only enable null-ls for javascript files
+        if vim.bo.filetype == "typescript" then return client.name == "null-ls" end
+        -- enable all other clients
+        return true
+      end,
       timeout_ms = 3000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true

@@ -39,7 +39,7 @@ return {
         "yamllint",
         "fixjson",
         -- "luaformatter",
-        "prettier",
+        "prettierd",
         "stylua",
       })
     end,
