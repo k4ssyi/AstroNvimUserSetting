@@ -1,5 +1,6 @@
 return {
   "petertriho/nvim-scrollbar",
+  event = "User AstroFile",
   opts = function(_, opts)
     require("astronvim.utils").extend_tbl(opts, {
       handlers = {
@@ -33,5 +34,4 @@ return {
 
     return opts
   end,
-  event = "User AstroFile",
 }

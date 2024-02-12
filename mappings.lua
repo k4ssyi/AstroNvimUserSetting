@@ -48,6 +48,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>gnd"] = { "<cmd>DiffviewOpen<cr>", desc = "View Git diffviewOpen" },
+    ["<leader>gl"] = { "<cmd>ToggleBlame window<cr>", desc = "Toggle Blame" },
   },
   i = {
     -- カーソルを行の末尾に移動
