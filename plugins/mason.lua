@@ -9,7 +9,6 @@ return {
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
         "bashls",
         "lua_ls",
-        "tsserver",
         "yamlls",
         "tailwindcss",
         "docker_compose_language_service",
@@ -19,6 +18,7 @@ return {
         "prismals",
         "sqlls",
         "vimls",
+        "biome",
       })
     end,
   },
@@ -31,17 +31,18 @@ return {
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
         -- "cspell",
         "codespell",
+        "typos",
         "gitlint",
         "shellcheck",
         "jsonlint",
-        -- "luacheck",
         "markdownlint",
         "yamllint",
         "fixjson",
-        -- "luaformatter",
-        "eslint_d",
-        "prettierd",
         "stylua",
+        "biome",
+        "jq",
+        -- "eslint_d",
+        -- "prettierd",
       })
     end,
   },
