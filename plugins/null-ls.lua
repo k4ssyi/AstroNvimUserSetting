@@ -6,18 +6,12 @@ return {
   },
   opts = function(_, config)
     -- config variable is the default configuration table for the setup function call
-    local null_ls = require "null-ls"
-
+    local ok, null_ls = pcall(require, "null-ls")
+    if not ok then return end
     -- Check supported formatters and linters
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
     config.sources = {
-      -- Set a formatter
-      -- null_ls.builtins.formatting.stylua,
-      -- null_ls.builtins.formatting.prettierd,
-      null_ls.builtins.diagnostics.codespell, -- 診断専用に設定,formatはしない
-      null_ls.builtins.diagnostics.typos, -- 診断専用に設定,formatはしない
-
       require("none-ls.formatting.jq").with {
         condition = function(utils) return utils.has_file { "biome.json", "biome.jsonc" } == false end,
       },
@@ -39,6 +33,9 @@ return {
           "$FILENAME",
         },
       },
+      -- 診断専用に設定,formatはしない
+      null_ls.builtins.diagnostics.typos,
+      null_ls.builtins.diagnostics.flake8,
     }
     return config -- return final config table
   end,

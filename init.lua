@@ -34,8 +34,8 @@ return {
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
         "tsserver",
+        "pylsp",
         "typos",
-        "codespell",
       },
       format_on_save = {
         enabled = true, -- enable or disable format on save globally

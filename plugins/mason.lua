@@ -10,6 +10,7 @@ return {
         "bashls",
         "lua_ls",
         "yamlls",
+        "tsserver",
         "tailwindcss",
         "docker_compose_language_service",
         "dockerls",
@@ -19,7 +20,16 @@ return {
         "sqlls",
         "vimls",
         "biome",
+        "pylsp",
       })
+      opts.settings = {
+        ["pylsp"] = {
+          codeLens = { enable = true },
+        },
+        ["tsserver"] = {
+          codeLens = { enable = true },
+        },
+      }
     end,
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -30,7 +40,6 @@ return {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
         -- "cspell",
-        "codespell",
         "typos",
         "gitlint",
         "shellcheck",
@@ -41,6 +50,9 @@ return {
         "stylua",
         "biome",
         "jq",
+        "flake8",
+        -- "black",
+        -- "isort",
         -- "eslint_d",
         -- "prettierd",
       })
